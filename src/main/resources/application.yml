@@ -43,6 +43,7 @@ secure:
   ignored:
     urls: #安全路径白名单
       - /web3/**
+      - /uploads/**
       - /swagger-ui/
       - /swagger-resources/**
       - /**/v2/api-docs
