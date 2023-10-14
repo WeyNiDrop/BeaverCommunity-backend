@@ -7,12 +7,16 @@ import com.macro.mall.tiny.modules.web3.dto.LodgeParams;
 import com.macro.mall.tiny.modules.web3.dto.LodgeVoteParams;
 import com.macro.mall.tiny.modules.web3.model.Web3Lodge;
 import com.macro.mall.tiny.modules.web3.model.Web3LodgeVotes;
+import com.macro.mall.tiny.modules.web3.service.Web3LodgeService;
+import com.macro.mall.tiny.modules.web3.service.Web3LodgeVotesService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -29,11 +33,15 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class Web3CommunityController {
 
+    @Resource
+    private Web3LodgeService lodgeService;
+
+
     @ApiOperation(value = "Get lodgeList")
     @PostMapping(value = "/lodges")
     @ResponseBody
     public CommonResult<CommonPage<Web3Lodge>> lodges(@Validated @RequestBody LodgeParams params){
-        return null;
+        return CommonResult.success(lodgeService.lodges(params));
     }
 
 
@@ -41,7 +49,7 @@ public class Web3CommunityController {
     @PostMapping(value = "/votes")
     @ResponseBody
     public CommonResult<CommonPage<Web3LodgeVotes>> votes(@Validated @RequestBody LodgeVoteParams params){
-        return null;
+        return CommonResult.success(lodgeService.votes(params));
     }
 }
 
