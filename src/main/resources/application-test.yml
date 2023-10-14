@@ -1,0 +1,42 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ethsnft?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456789
+  redis:
+    host: 127.0.0.1
+    database: 1
+    port: 6379
+    password: 123456
+    timeout: 3000ms
+
+logging:
+  level:
+    root: info
+    com.macro.mall: info
+
+#系统配置
+system:
+  sysDomain: http://192.168.1.123:8082
+  frontDomain: http://localhost:8090
+  defaultRole: 9
+  network: test_net
+  chain: eth
+  #  chainId: 0x5
+  chainId: 0xaa36a7
+  #  rpcHost: https://goerli.infura.io/v3/88fe7020538744f5b3a5f4db4a131694
+  rpcHost: https://sepolia.infura.io/v3/88fe7020538744f5b3a5f4db4a131694
+  #  rpcHost: https://rpc.ankr.com/eth_sepolia/536c0e88723ab2836b706145ad1f07a0bbe3d4bf57d815cc4dc6a9d7e86d1bc9
+  #  rpcHost: https://mainnet.infura.io/v3/88fe7020538744f5b3a5f4db4a131694
+#  rpcHost: https://eth.llamarpc.com
+  rpcPort:
+  rpcUser:
+  rpcPassword:
+  filesDir: inscriptions/
+  marketContract: "0x2B283100b78b3673920b690B7179D0c13C47b8a1"
+  privateKey: keys/private_key
+  domain: "Eths Souvenir"
+  domainVersion: "1.0"
+
+
+

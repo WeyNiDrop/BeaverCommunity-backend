@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macro.mall.tiny.modules.web3.mapper.Web3LodgeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.macro.mall.tiny.modules.web3.model.Web3Lodge">
+        <id column="id" property="id" />
+        <result column="creator" property="creator" />
+        <result column="content" property="content" />
+        <result column="require_subscribe" property="requireSubscribe" />
+        <result column="round" property="round" />
+        <result column="owner" property="owner" />
+        <result column="comment_count" property="commentCount" />
+        <result column="competition_votes" property="competitionVotes" />
+        <result column="extra_votes" property="extraVotes" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+</mapper>
