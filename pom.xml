@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.macro.mall</groupId>
-    <artifactId>eths</artifactId>
+    <artifactId>beaverCommunity</artifactId>
     <version>1.0.0</version>
     <name>beaverCommunity</name>
     <description>beaver community project</description>
