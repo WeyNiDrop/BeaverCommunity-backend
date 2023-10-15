@@ -59,7 +59,7 @@ public class EthTask {
 
     public static int blockError = 0;
 
-    @Scheduled(fixedRate = 12000)
+    @Scheduled(fixedRate = 3000)
     public void batchBlockListener() throws IOException {
         if (!web3Configure.getListenerSwitch()){
             return;
