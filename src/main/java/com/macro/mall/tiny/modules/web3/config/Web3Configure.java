@@ -27,6 +27,9 @@ public class Web3Configure {
     @Value("${system.web3.privateKey}")
     private String privateKey;
 
+    @Value("${system.web3.contracts}")
+    private String contracts;
+
     @Value("${system.web3.domainVersion}")
     private String domainVersion;
 
@@ -39,6 +42,9 @@ public class Web3Configure {
 
     private String marketDomainHash;
 
+    public String getContracts() {
+        return contracts;
+    }
 
     public Credentials getCredentials() {
         if(credentials == null){

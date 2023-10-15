@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-10-15
  */
 public interface Web3FansVotesService extends IService<Web3FansVotes> {
-
+    Web3FansVotes getByLodgeAndFans(Long lodge, String sponsor);
 }

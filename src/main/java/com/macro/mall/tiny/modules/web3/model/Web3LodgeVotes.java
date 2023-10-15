@@ -33,7 +33,7 @@ public class Web3LodgeVotes implements Serializable {
 
     private Long lodgeId;
 
-    private String ammount;
+    private Integer amount;
 
     private String sponsor;
 
@@ -47,5 +47,5 @@ public class Web3LodgeVotes implements Serializable {
 
     private Long replyComment;
 
-
+    private String tx;
 }

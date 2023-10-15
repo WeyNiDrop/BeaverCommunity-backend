@@ -4,6 +4,8 @@ import jnr.ffi.annotations.IgnoreError;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.web3j.crypto.Hash;
+import org.web3j.utils.Numeric;
 
 @SpringBootTest
 @Slf4j
@@ -14,4 +16,5 @@ public class BeaverCommunityTest {
     public void filterCreateLogs(){
 
     }
+
 }

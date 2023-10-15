@@ -12,5 +12,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-10-14
  */
 public interface Web3LodgeVotesService extends IService<Web3LodgeVotes> {
-
+    Web3LodgeVotes getByTX(String tx);
 }

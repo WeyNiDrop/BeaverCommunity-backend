@@ -11,7 +11,7 @@ import lombok.Setter;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author evan
@@ -32,9 +32,9 @@ public class Web3FansVotes implements Serializable {
 
     private String sponsor;
 
-    private Long competitionVotes;
+    private Integer competitionVotes;
 
-    private Long extraVotes;
+    private Integer extraVotes;
 
     private Boolean isWithdraw;
 

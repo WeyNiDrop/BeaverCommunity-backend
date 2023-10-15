@@ -25,8 +25,7 @@ system:
     rpcHost: https://sepolia.infura.io/v3/88fe7020538744f5b3a5f4db4a131694
     privateKey: keys/private_key
     domain: ""
-    contracts:
-      - ""
+    contracts: "0xd7c5c162F851C20b5Dd9dAb4186d3F59d598DBFE"
     domainVersion: ""
     listenerSwitch: false
 
