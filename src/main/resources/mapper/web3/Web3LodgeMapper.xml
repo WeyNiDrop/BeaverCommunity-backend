@@ -16,4 +16,11 @@
         <result column="create_time" property="createTime" />
     </resultMap>
 
+    <select id="sponsorWithdrawAble" resultType="com.macro.mall.tiny.modules.web3.model.Web3Lodge">
+        SELECT wl.* from web3_lodge wl
+        left join web3_fans_votes wfv on (wfv.lodge_id  = wl.id AND wfv.sponsor = #{params.sponsor})
+        WHERE  wfv.is_withdraw  = 0
+        AND wfv.competition_votes > 0
+        AND wl.`round` = #{params.round}
+    </select>
 </mapper>

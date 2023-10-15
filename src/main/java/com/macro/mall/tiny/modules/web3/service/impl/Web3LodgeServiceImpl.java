@@ -96,7 +96,7 @@ public class Web3LodgeServiceImpl extends ServiceImpl<Web3LodgeMapper, Web3Lodge
 
     @Override
     public CommonPage<Web3Lodge> sponsorWithdrawAble(SponsorWithdrawParams params) {
-
-        return null;
+        Page<Web3Lodge> page = new Page<>(params.getPageNum(), params.getPageSize());
+        return CommonPage.restPage(baseMapper.sponsorWithdrawAble(page, params));
     }
 }
