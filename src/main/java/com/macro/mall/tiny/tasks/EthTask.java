@@ -220,7 +220,7 @@ public class EthTask {
             EventValues values = Contract.staticExtractEventParameters(newComment, eventLog);
             Long commentIndex = ((Uint128) values.getIndexedValues().get(2)).getValue().longValue();
             Long replyComment = ((Uint128) values.getNonIndexedValues().get(0)).getValue().longValue();
-            String comment = ((Utf8String)values.getNonIndexedValues().get(2).getValue()).getValue();
+            String comment = values.getNonIndexedValues().get(2).getValue().toString();
             lodgeVotes.setCommentIndex(commentIndex);
             lodgeVotes.setReplyComment(replyComment);
             lodgeVotes.setComment(comment);
@@ -242,8 +242,8 @@ public class EthTask {
         String creator = values1.getIndexedValues().get(1).getValue().toString();
         Integer round = ((Uint64) values1.getIndexedValues().get(2)).getValue().intValue();
 
-        boolean requireSubscribe = ((Bool)values1.getNonIndexedValues().get(0).getValue()).getValue();
-        String content = ((Utf8String)values1.getNonIndexedValues().get(1).getValue()).getValue();
+        boolean requireSubscribe = (boolean) values1.getNonIndexedValues().get(0).getValue();
+        String content = values1.getNonIndexedValues().get(1).getValue().toString();
         Web3Lodge web3Lodge = new Web3Lodge();
         web3Lodge.setId(id);
         web3Lodge.setCreator(creator);
