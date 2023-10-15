@@ -22,12 +22,13 @@ system:
   frontDomain: http://localhost:8090
   defaultRole: 9
   web3:
-    chainId: 0xaa36a7
-    rpcHost: https://sepolia.infura.io/v3/88fe7020538744f5b3a5f4db4a131694
+    chainId: 534351
+    rpcHost: https://sepolia-rpc.scroll.io
     privateKey: keys/private_key
     domain: ""
+    contracts: "0x9a835ed238356cf3be47910bf19c3953d1bb81cf"
     domainVersion: ""
-    listenerSwitch: false
+    listenerSwitch: true
 
 
 
