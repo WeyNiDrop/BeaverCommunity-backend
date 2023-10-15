@@ -1,10 +1,13 @@
 package com.macro.mall.tiny.modules.web3.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.macro.mall.tiny.common.api.CommonPage;
 import com.macro.mall.tiny.modules.web3.dto.LodgeParams;
 import com.macro.mall.tiny.modules.web3.dto.LodgeVoteParams;
+import com.macro.mall.tiny.modules.web3.dto.OwnerWithdrawParams;
+import com.macro.mall.tiny.modules.web3.dto.SponsorWithdrawParams;
 import com.macro.mall.tiny.modules.web3.model.Web3Lodge;
 import com.macro.mall.tiny.modules.web3.mapper.Web3LodgeMapper;
 import com.macro.mall.tiny.modules.web3.model.Web3LodgeVotes;
@@ -76,5 +79,24 @@ public class Web3LodgeServiceImpl extends ServiceImpl<Web3LodgeMapper, Web3Lodge
 
         Page<Web3LodgeVotes> result = votesService.page(page, wrapper);
         return CommonPage.restPage(result);
+    }
+
+    @Override
+    public CommonPage<Web3Lodge> ownerWithdrawAble(OwnerWithdrawParams params) {
+        Page<Web3Lodge> page = new Page<>(params.getPageNum(), params.getPageSize());
+        LambdaQueryWrapper<Web3Lodge> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Web3Lodge::getOwner, params.getOwner());
+        wrapper.eq(Web3Lodge::getRound, params.getRound());
+        wrapper.ne(Web3Lodge::getCompetitionVotes, 0);
+        wrapper.eq(Web3Lodge::getIsWithdraw, 0);
+
+        Page<Web3Lodge> result = page(page, wrapper);
+        return CommonPage.restPage(result);
+    }
+
+    @Override
+    public CommonPage<Web3Lodge> sponsorWithdrawAble(SponsorWithdrawParams params) {
+
+        return null;
     }
 }

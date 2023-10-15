@@ -1,5 +1,7 @@
 package com.macro.mall.tiny.modules.web3.model;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 import io.swagger.annotations.ApiModel;
@@ -9,43 +11,32 @@ import lombok.Setter;
 
 /**
  * <p>
- *
+ * 
  * </p>
  *
  * @author evan
- * @since 2023-10-14
+ * @since 2023-10-15
  */
 @Getter
 @Setter
-@TableName("web3_lodge")
-@ApiModel(value = "Web3Lodge", description = "")
-public class Web3Lodge implements Serializable {
+@TableName("web3_fans_votes")
+@ApiModel(value = "Web3FansVotes对象", description = "")
+public class Web3FansVotes implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public static final String ORDER_BY_COMPETITION_VOTES  = "competition_votes";
-    public static final String ORDER_BY_ID  = "id";
-
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    private String creator;
+    private Long lodgeId;
 
-    private String content;
-
-    private Boolean requireSubscribe;
-
-    private Integer round;
-
-    private String owner;
-
-    private Long commentCount;
+    private String sponsor;
 
     private Long competitionVotes;
 
     private Long extraVotes;
 
-    private Long createTime;
-
     private Boolean isWithdraw;
+
 
 }

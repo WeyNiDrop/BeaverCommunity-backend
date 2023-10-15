@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.macro.mall.tiny.modules.web3.mapper.Web3FansVotesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.macro.mall.tiny.modules.web3.model.Web3FansVotes">
+        <id column="id" property="id" />
+        <result column="lodge_id" property="lodgeId" />
+        <result column="sponsor" property="sponsor" />
+        <result column="competition_votes" property="competitionVotes" />
+        <result column="extra_votes" property="extraVotes" />
+        <result column="is_withdraw" property="isWithdraw" />
+    </resultMap>
+
+</mapper>
